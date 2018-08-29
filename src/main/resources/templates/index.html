@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<title>管理系统模板</title>
+		<link rel="stylesheet" type="text/css" href="./layui/css/layui.css"/>
+		<script src="../static/layui/layer.js" th:src="@{/layui/layui.js}"></script>
+		<script src="../static/layui/layer.js" th:src="@{/js/common.js}"></script>
+		<script src="../static/layui/layer.js" th:src="@{/js/main.js}"></script>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">xx管理系统</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="menu-btn" id="hideBtn">
+					<a href="javascript:;">
+						<span class="iconfont">&#xe60e;</span>
+					</a>
+				</div>
+
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="">待办<span class="layui-badge">9</span></a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/mucho.png" class="layui-nav-img"/>
+							Mucho
+						</a>
+						<dl class="layui-nav-child">
+							<dd><a href="">基本资料</a></dd>
+							<dd><a href="">安全设置</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item"><a href="">退出</a></li>
+				</ul>
+			</div>
+
+
+
+			<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree"  lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a class="" href="javascript:;">所有商品</a>
+						<dl class="layui-nav-child">
+							<dd><a href="javascript:;">列表一</a></dd>
+							<dd><a href="javascript:;">列表二</a></dd>
+							<dd><a href="javascript:;">列表三</a></dd>
+							<dd><a href="">超链接</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">解决方案</a>
+						<dl class="layui-nav-child">
+							<dd><a href="javascript:;">列表一</a></dd>
+							<dd><a href="javascript:;">列表二</a></dd>
+							<dd><a href="">超链接</a></dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item"><a href="">云市场</a></li>
+					<li class="layui-nav-item"><a href="">发布商品</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="layui-body">
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+				<ul class="layui-tab-title">
+					<li class="layui-this">我的首页</li>
+				</ul>
+				<div class="layui-tab-content layui-body" >
+					<div class="layui-tab-item layui-show">内容不一样是要有，因为你可以监听tab事件（阅读下文档就是了）</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+			© layui.com - 底部固定区域
+		</div>
+	</div>
+		<script type="text/javascript">
+            // layui.use('element', function(){
+            //     var element = layui.element;
+            //
+            //     //一些事件监听
+            //     element.on('tab(demo)', function(data){
+            //         console.log(data);
+            //     });
+            // });
+
+            var scope={
+				link:'./welcome.html'
+			}
+		</script>
+
+	</body>
+</html>

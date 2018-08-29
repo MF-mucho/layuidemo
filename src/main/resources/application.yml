@@ -1,0 +1,15 @@
+spring:
+    thymeleaf:
+        cache: false
+        check-template: false
+        content-type: text/html
+        encoding: utf-8
+        mode: HTML5
+        prefix: classpath:templates/
+    mvc:
+        view:
+          prefix: templates/
+          suffix: .html
+server:
+    context-path: /
+    port: 9087
